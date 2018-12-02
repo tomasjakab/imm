@@ -1,0 +1,46 @@
+name: celeba-10pts
+training:
+  ncheckpoint: 2000
+  n_test: 1000
+  gradclip: 1.0
+  dset: celeba
+  train_dset_params:
+    dataset: celeba
+    subset: train
+  test_dset_params:
+    dataset: mafl
+    subset: test
+    order_stream: True
+    max_samples: 1000
+  logdir: ${logdir}/${name}
+  datadir: ${celeba_data_dir}
+  batch: 50
+  allow_growth: True
+  optim: Adam
+  lr:
+    start_val: 0.001
+    step: 100000
+    decay: 0.95
+
+model:
+    gauss_std: 0.10
+    gauss_mode: 'rot'
+    n_maps: 10
+
+    n_filters: 32
+    block_sizes: [1, 1, 1]
+
+    n_filters_render: 32
+    renderer_stride: 2
+    min_res: 16
+    same_n_filt: False
+
+    reconstruction_loss: perceptual  # in {'perceptual', 'l2'}
+    perceptual:
+      l2: True
+      comp: ['input', 'conv1_2','conv2_2','conv3_2','conv4_2','conv5_2']
+      net_file: ${vgg16_path}
+
+    loss_mask: True
+    confidence: False
+    channels_bug_fix: True

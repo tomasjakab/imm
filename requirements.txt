@@ -1,0 +1,13 @@
+tensorflow-gpu==1.10.0
+torch==0.4.1
+scipy
+pillow
+matplotlib
+unionfind
+sklearn
+shapely
+h5py
+scikit-image
+deepdish
+pyyaml
+metayaml
