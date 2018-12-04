@@ -1,9 +1,9 @@
-# Unsupervised Learning of Object Landmarks through Conditional Image Generation
+# [Unsupervised Learning of Object Landmarks through Conditional Image Generation](http://www.robots.ox.ac.uk/~vgg/research/unsupervised_landmarks/)
 
-[Tomas Jakab*](http://www.robots.ox.ac.uk/~tomj), [Ankush Gupta*](http://www.robots.ox.ac.uk/~ankush), Hakan Bilen, Andrea Vedaldi (* equal contribution).  
+[Tomas Jakab*](http://www.robots.ox.ac.uk/~tomj), [Ankush Gupta*](http://www.robots.ox.ac.uk/~ankush), Hakan Bilen, Andrea Vedaldi (* equal contribution).
 Advances in Neural Information Processing Systems (NeurIPS) 2018.
 
-Software that learns to discover object landmarks without any manual annotations.  
+Software that learns to discover object landmarks without any manual annotations.
 It automatically learns from images or videos and works across different datasets of faces, humans, and 3D objects.
 
 ![Unsupervised Landmarks](examples/resources/figures/splash.jpg)
